@@ -35,6 +35,26 @@ The project uses in-memory Java collections to store data instead of a database.
 
 Custom exception mappers and a logging filter were added so that the API gives structured error responses and logs incoming requests and outgoing status codes.
 
+## Build and Run
+
+1. Clone the repository:
+   `git clone https://github.com/CalciumCO3/Client-Server.git`
+
+2. Open the project folder:
+   `cd Client-Server`
+
+3. Build the project with Maven:
+   `mvn clean install`
+
+4. Run the server:
+   `mvn exec:java`
+
+5. When the server starts, it should print:
+   `Server started at: http://localhost:8081/api/v1`
+
+6. The API can then be accessed at:
+   `http://localhost:8081/api/v1`
+
 ## Sample curl Commands
 
 ### Get API discovery information
@@ -62,4 +82,4 @@ Custom exception mappers and a logging filter were added so that the API gives s
 `curl -X POST http://localhost:8081/api/v1/sensors/TEMP-001/readings -H "Content-Type: application/json" -d "{\"id\":\"READ-001\",\"timestamp\":1712600000000,\"value\":23.4}"`
 
 ### Delete Room
-`curl -X DELETE http://localhost:8081/api/v1/rooms/LIB-301`
+`curl -X DELETE http://localhost:8081/api/v1/rooms/LIB-001`
