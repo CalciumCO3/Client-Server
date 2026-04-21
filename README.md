@@ -73,7 +73,6 @@ The API supports:
 - nested sensor reading resources
 - custom exception handling
 - request/response logging
-- 
 ## API Design Overview
 
 This API was designed as a simple RESTful service for a Smart Campus system. The idea is to model the campus using three main resources: rooms, sensors, and sensor readings. Rooms and sensors are top-level resources, readings are nested under a sensor because a reading belongs to a specific sensor.
